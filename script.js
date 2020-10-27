@@ -56,12 +56,13 @@ function add_links() {
 
 			// add style
 			let aspect = num_rows / num_colmuns;
-			let width = 40;
+			let width = jsonObject.width;
 			let height = width * aspect;
 			wrapper.style.gridTemplateAreas = grid_template_areas;
 			wrapper.style.width = width + "vw";
 			wrapper.style.height = height + "vw";
 			wrapper.style.marginTop = "calc( 50vh - " + height / 2 + "vw" + ")";
+			document.body.style.backgroundColor = jsonObject.back_color;
 		}
 	);
 }

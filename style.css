@@ -1,11 +1,4 @@
-body {
-  background-color: #2d2d2d;
-}
-
 #wrapper {
-  /* width: 40vw; */
-  /* height: 20vw; */
-  /* margin: calc(50vh - 10vw) auto auto auto; */
   margin: auto;
   display: grid;
 }
