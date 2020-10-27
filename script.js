@@ -47,16 +47,21 @@ function add_links() {
 
 			// 列数で割り切れず、最後の行の情報が残っている場合は追加する
 			if (grid_template_areas_row != "") {
+				let num_rem = num_colmuns - num_links % num_colmuns;
+				for (let k = 0; k < num_rem; k++) {
+					grid_template_areas_row += "rem" + k + " ";
+				}
 				grid_template_areas += "\"" + grid_template_areas_row + "\" ";
 			}
 
 			// add style
+			let aspect = num_rows / num_colmuns;
+			let width = 40;
+			let height = width * aspect;
 			wrapper.style.gridTemplateAreas = grid_template_areas;
-
-
-			// wrapper.innerHTML += "num_columns:" + num_colmuns + "<br>";
-			// wrapper.innerHTML += "num_links:" + num_links + "<br>";
-			// wrapper.innerHTML += "num_rows:" + num_rows + "<br>";
+			wrapper.style.width = width + "vw";
+			wrapper.style.height = height + "vw";
+			wrapper.style.marginTop = "calc( 50vh - " + height / 2 + "vw" + ")";
 		}
 	);
 }
