@@ -8,10 +8,10 @@ function add_links() {
 			let jsonObject = JSON.parse(items.json_text);
 
 			const wrapper = document.getElementById("wrapper");
-			num_colmuns = jsonObject.num_colmuns;
-			num_links = jsonObject.num_links;
-			num_rows = Math.ceil(num_links / num_colmuns);
 			links = jsonObject.links;
+			num_colmuns = jsonObject.num_colmuns;
+			num_links = links.length;
+			num_rows = Math.ceil(num_links / num_colmuns);
 
 			// add links
 			grid_template_areas = "";
@@ -33,12 +33,11 @@ function add_links() {
 
 				// create a tag
 				const newA = document.createElement("a");
-				// TODO: href
+				newA.href = links[index]["page_url"];
 
 				// create img
 				const newImg = document.createElement("img");
-				// TODO: src
-				// newImg.src = "https://simpleicons.org/icons/youtube.svg";
+				newImg.src = links[index]["img_url"];
 
 				newA.appendChild(newImg);
 				newDiv.appendChild(newA);
