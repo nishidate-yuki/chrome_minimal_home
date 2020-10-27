@@ -2,42 +2,80 @@
 <html>
 
 <head>
-	<title>Minimal Home Options</title>
+    <title>Minimal Home Options</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2d2d2d;
+        }
+        .wrapper{
+            width: 60vw;
+            margin: 10vh auto auto auto;
+            /* background-color: aliceblue; */
+            display: flex;
+            flex-direction: column;
+        }
+        textarea{
+            width: 80%;
+            height: 50vh;
+            margin: 50px auto;
+            font-family: 'Inconsolata', monospace;
+            font-size: 14pt;
+
+            border: none;
+            border-radius: 5px;
+            background-color: #dddddd;
+            padding: 20px;
+
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            margin: auto;
+            font-family: 'Inconsolata', monospace;
+            font-size: 18pt;
+
+            border-radius: 100px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="wrapper">
 
-	<textarea id="json_text" rows="12" cols="80">
+        <textarea id="json_text" rows="12" cols="80">
 {
-	"num_colmuns": 4,
-	"title": "New tab",
-	"width": 40,
-	"img_size": 50,
-	"back_color": "#2d2d2d",
-	"links": [
-		{
-			"page_url": "https://www.youtube.com/",
-			"img_url": "https://simpleicons.org/icons/youtube.svg"
-		},
-		{
-			"page_url": "https://music.youtube.com/",
-			"img_url": "https://simpleicons.org/icons/youtubemusic.svg"
-		},
-		{
-			"page_url": "https://music.apple.com/",
-			"img_url": "https://simpleicons.org/icons/applemusic.svg"
-		},
-		{
-			"page_url": "https://app.getpocket.com/",
-			"img_url": "https://simpleicons.org/icons/pocket.svg"
-		}
-	]
+    "num_colmuns": 4,
+    "title": "New tab",
+    "width": 40,
+    "img_size": 50,
+    "back_color": "#ffffff",
+    "links": [
+        {
+            "page_url": "https://www.youtube.com/",
+            "img_url": "https://simpleicons.org/icons/youtube.svg"
+        },
+        {
+            "page_url": "https://music.youtube.com/",
+            "img_url": "https://simpleicons.org/icons/youtubemusic.svg"
+        },
+        {
+            "page_url": "https://music.apple.com/",
+            "img_url": "https://simpleicons.org/icons/applemusic.svg"
+        },
+        {
+            "page_url": "https://app.getpocket.com/",
+            "img_url": "https://simpleicons.org/icons/pocket.svg"
+        }
+    ]
 }
-	</textarea>
+    </textarea>
 
-	<button id="save">Save</button>
+        <button id="save">Save</button>
 
-	<script src="options.js"></script>
+    </div>
+
+    <script src="options.js"></script>
 </body>
 
 </html>
