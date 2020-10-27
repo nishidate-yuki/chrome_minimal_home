@@ -15,10 +15,14 @@
             display: flex;
             flex-direction: column;
         }
+        h1{
+            color: white;
+            font-size: 24pt;
+        }
         textarea{
-            width: 80%;
+            width: 94%;
             height: 50vh;
-            margin: 50px auto;
+            margin: 25px auto;
             font-family: 'Inconsolata', monospace;
             font-size: 14pt;
 
@@ -26,12 +30,14 @@
             border-radius: 5px;
             background-color: #dddddd;
             padding: 20px;
-
+        }
+        textarea:focus{
+            outline: none;
         }
         button{
             width: 150px;
             height: 50px;
-            margin: auto;
+            margin-left: auto;
             font-family: 'Inconsolata', monospace;
             font-size: 18pt;
 
@@ -42,6 +48,7 @@
 
 <body>
     <div class="wrapper">
+        <h1>Minimal Home Options</h1>
 
         <textarea id="json_text" rows="12" cols="80">
 {
