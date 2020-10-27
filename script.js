@@ -11,6 +11,7 @@ function add_links() {
 			num_colmuns = jsonObject.num_colmuns;
 			num_links = jsonObject.num_links;
 			num_rows = Math.ceil(num_links / num_colmuns);
+			links = jsonObject.links;
 
 			// add links
 			grid_template_areas = "";
@@ -37,8 +38,7 @@ function add_links() {
 				// create img
 				const newImg = document.createElement("img");
 				// TODO: src
-				newImg.src = "https://simpleicons.org/icons/youtube.svg";
-
+				// newImg.src = "https://simpleicons.org/icons/youtube.svg";
 
 				newA.appendChild(newImg);
 				newDiv.appendChild(newA);

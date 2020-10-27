@@ -8,9 +8,6 @@ body {
   margin: calc(50vh - 10vw) auto auto auto;
 
   display: grid;
-  /* grid-template-areas:
-    "item00 item01 item02 item03"
-    "item10 item item12 item13"; */
 }
 
 .link {
