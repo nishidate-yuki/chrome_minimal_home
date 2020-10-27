@@ -1,0 +1,25 @@
+body {
+  background-color: #2d2d2d;
+}
+
+#wrapper {
+  width: 40vw;
+  height: 20vw;
+  margin: calc(50vh - 10vw) auto auto auto;
+
+  display: grid;
+  /* grid-template-areas:
+    "item00 item01 item02 item03"
+    "item10 item item12 item13"; */
+}
+
+.link {
+  max-width: 50%;
+  max-height: 50%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  margin: auto;
+}
