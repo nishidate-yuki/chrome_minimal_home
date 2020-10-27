@@ -12,6 +12,7 @@ function add_links() {
 			num_colmuns = jsonObject.num_colmuns;
 			num_links = links.length;
 			num_rows = Math.ceil(num_links / num_colmuns);
+			document.title = jsonObject.title;
 
 			// add links
 			grid_template_areas = "";
