@@ -13,10 +13,20 @@ function add_links() {
                     function () { }
                 );
             }
-            // get json
-            let jsonObject = JSON.parse(items.json_text);
-
             const wrapper = document.getElementById("wrapper");
+
+            // get json
+            let jsonObject
+            try {
+                jsonObject = JSON.parse(items.json_text);
+            } catch (e) {
+                // alert("Minimal Home Options Error: \n" + e);
+                const newMessage = document.createElement("h1");
+                newMessage.innerHTML += "Minimal Home Options Error!<br>" + e;
+                wrapper.appendChild(newMessage);
+                return;
+            }
+
             links = jsonObject.links;
             num_colmuns = jsonObject.num_colmuns;
             num_links = links.length;
