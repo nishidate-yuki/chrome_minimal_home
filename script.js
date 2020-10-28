@@ -48,7 +48,7 @@ function add_links() {
                 const newImg = document.createElement("img");
                 newImg.src = links[index]["img_url"];
                 newImg.style.width = jsonObject.img_size + "%";
-                newImg.style.margin = "auto " + jsonObject.img_size / 2 + "%";
+                newImg.style.margin = "auto " + ((100 - jsonObject.img_size) / 2) + "%";
 
                 newA.appendChild(newImg);
                 newDiv.appendChild(newA);
