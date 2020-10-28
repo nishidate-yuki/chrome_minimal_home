@@ -5,7 +5,7 @@ function add_links() {
         ["json_text"],
         function (items) {
             if (items.json_text == undefined) {
-                items.json_text = "{\r\n    \"num_colmuns\" : 4,\r\n\r\n    \"title\"       : \"New tab\",\r\n\r\n    \"width\"       : 40,\r\n\r\n    \"img_size\"    : 50,\r\n\r\n    \"back_color\"  : \"#ffffff\",\r\n\r\n    \"links\": [\r\n        {\r\n            \"page_url\" : \"https:\/\/www.youtube.com\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/youtube.svg\"\r\n        },\r\n        {\r\n            \"page_url\" : \"https:\/\/twitter.com\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/twitter.svg\"\r\n        },\r\n        {\r\n            \"page_url\" : \"https:\/\/music.apple.com\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/applemusic.svg\"\r\n        },\r\n        {\r\n            \"page_url\" : \"https:\/\/www.behance.net\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/behance.svg\"\r\n        }\r\n    ]\r\n}";
+                items.json_text = "{\r\n    \"num_colmuns\" : 4,\r\n\r\n    \"title\"       : \"New tab\",\r\n\r\n    \"width\"       : 40,\r\n\r\n    \"img_size\"    : 50,\r\n\r\n    \"back_color\"  : \"#ffffff\",\r\n\r\n    \"links\": [\r\n        {\r\n            \"page_url\" : \"https:\/\/www.youtube.com\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/youtube.svg\"\r\n        },\r\n        {\r\n            \"page_url\" : \"https:\/\/twitter.com\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/twitter.svg\"\r\n        },\r\n        {\r\n            \"page_url\" : \"https:\/\/music.apple.com\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/applemusic.svg\"\r\n        },\r\n        {\r\n            \"page_url\" : \"https:\/\/www.behance.net\/\",\r\n            \"img_url\"  : \"https:\/\/simpleicons.org\/icons\/behance.svg\"\r\n        }\r\n    ],\r\n    \r\n    \"img_css\"     : \"\"\r\n}\r\n";
                 chrome.storage.sync.set(
                     {
                         json_text: items.json_text
@@ -49,6 +49,7 @@ function add_links() {
                 newImg.src = links[index]["img_url"];
                 newImg.style.width = jsonObject.img_size + "%";
                 newImg.style.margin = "auto " + ((100 - jsonObject.img_size) / 2) + "%";
+                newImg.style += jsonObject.img_css;
 
                 newA.appendChild(newImg);
                 newDiv.appendChild(newA);
